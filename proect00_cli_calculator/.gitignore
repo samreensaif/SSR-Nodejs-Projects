@@ -1,0 +1,47 @@
+#! /usr/bin/env node
+"use strict";
+import inquirer from "inquirer";
+
+console.log("\nSIMPLE CALCULATOR\n");
+const result = await inquirer.prompt([
+    { msg: "Enter your first number:", type: "number", name: "firstnumber" },
+    { msg: "ENter your second number:", type: "number", name: "secondnumber" },
+    {
+        msg: "Select Operators",
+        type: "list",
+        name: "operators",
+        choices: [
+            "Addition",
+            "Subtraction",
+            "Multiplication",
+            "Division",
+            "Modulus",
+            "Percentage"
+           
+        ],
+    },
+]);
+if (result.operators === "Addition") {
+    console.log("Addition Result is:", result.firstnumber + result.secondnumber);
+}
+else if (result.operators === "Subtraction") {
+    console.log("Subtraction Result is:", result.firstnumber - result.secondnumber);
+}
+else if (result.operators === "Multiplication") {
+    console.log("Multiplication Result is:", result.firstnumber * result.secondnumber);
+}
+else if (result.operators === "Division") {
+    console.log("Division Result is:", result.firstnumber / result.secondnumber);
+}
+else if (result.operators === "Modulus") {
+    console.log("Modulus Result is:", result.firstnumber % result.secondnumber);
+}
+else if (result.operators === "Percentage") {
+    console.log(`Percentage Result is: ${(result.firstnumber / result.secondnumber)*100}%`);
+}
+else { 
+    console.log("Kindly select valid operator ")
+}
+
+
+console.log("THE END.")
