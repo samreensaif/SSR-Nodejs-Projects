@@ -1,0 +1,24 @@
+{
+  "name": "ssr-cli-adventure-game",
+  "version": "2.0.0",
+  "description": "its a simple console based adventure game",
+  "main": "main.js",
+  "type": "module",
+  "bin": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "samreen saif",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chalk-animation": "^1.6.3",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.12.7"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "chalk-animation": "^2.0.3",
+    "inquirer": "^9.2.20",
+    "node-emoji": "^2.1.3"
+  }
+}
