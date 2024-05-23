@@ -1,7 +1,8 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
-console.log(chalk.blueBright.bold(`\n\t\tWELCOME TO MY FIRST ATM \n\n`));
+console.log(chalk.blueBright.bold(`\n\t\tWELCOME TO SSR-ATM `));
+console.log(chalk.blueBright.bold(`\t\t******************* \n\n`));
 let myBalance = 500000; //Dollars
 const userName = await inquirer.prompt([
     {
@@ -37,11 +38,12 @@ async function continue_transaction() {
             choices: ["Yes", "No"],
         },
     ]);
-    if (continue_or_not.continueoption === "Yes") { //if yes than it will go to bank system again
+    if (continue_or_not.continueoption === "Yes") {
         banksystem();
     }
     else { //if no than program will end 
-        console.log(chalk.blueBright(`\n\n\t\tTHANKS FOR USING MY FIRST ATM`));
+        console.log(chalk.blueBright(`\n\n\t\tTHANKS FOR USING SSR-ATM`));
+        console.log(chalk.blueBright(`\t\t*************************`));
     }
 }
 // make the function for the whole atm options
@@ -147,8 +149,15 @@ async function banksystem() {
             const kelec = await inquirer.prompt([
                 { name: "kenum",
                     type: "number",
-                    message: "Enter 8-digits account number:"
-                }
+                    message: "Enter 4-digits K-Electric account number:",
+                    validate: function (input) {
+                        if (/^\d{4}$/.test(input)) {
+                            return true;
+                        }
+                        else {
+                            return "Enter only 4-digits K-Electric account number";
+                        }
+                    } }
             ]);
             console.log(chalk.blueBright(`\n\n\t\tK-Electric \n\n\t\t Account #: ${kelec.kenum} \n\n\t\t Due Amount: $200`));
             console.log(`\n`);
@@ -173,7 +182,15 @@ async function banksystem() {
                 {
                     name: "sgas",
                     types: "number",
-                    message: "Enter 8-digits account number:"
+                    message: "Enter 4-digits SUI-Gas account number:",
+                    validate: function (input) {
+                        if (/^\d{4}$/.test(input)) {
+                            return true;
+                        }
+                        else {
+                            return "Enter only 4-digits SUI-Gas account number";
+                        }
+                    }
                 }
             ]);
             console.log(chalk.blueBright(`\n\n\t\tSUI SOTHERN GAS COMPANY \n\n\t\t Account #: ${sui.sgas} \n\n\t\t Due Amount: $100`));
@@ -199,7 +216,15 @@ async function banksystem() {
             const water = await inquirer.prompt({
                 name: "kwsbill",
                 type: "number",
-                message: "Enter 8-digits account number:",
+                message: "Enter 4-digits KWSB account number:",
+                validate: function (input) {
+                    if (/^\d{4}$/.test(input)) {
+                        return true;
+                    }
+                    else {
+                        return "Enter only 4-digits KWSB account number";
+                    }
+                }
             });
             console.log(chalk.blueBright(`\n\n\t\tKarachi Water Board \n\n\t\t Account #: ${water.kwsbill}\n\n\t\t Due Amount: $75`));
             console.log(`\n`);
@@ -223,11 +248,17 @@ async function banksystem() {
             const phone = await inquirer.prompt([
                 { name: "phonebill",
                     type: "number",
-                    message: "Enter phone# with area code:"
-                }
+                    message: "Enter 4-digits Phone# :",
+                    validate: function (input) {
+                        if (/^\d{4}$/.test(input)) {
+                            return true;
+                        }
+                        else {
+                            return "Enter only 4-digits SUI-Gas account number";
+                        }
+                    } }
             ]);
-            console.log(chalk.blueBright(`\n\n\t\tPakistan Telecommunication Limited \n\n\t\tAccount #: ${phone.phonebill} \n\t\t Due Amount: $250`));
-            console.log(`\n`);
+            console.log(chalk.blueBright(`\n\n\t\tPakistan Telecommunication Limited \n\n\t\tAccount #: ${phone.phonebill} \n\t\t Due Amount: $250\n`));
             const yn = await inquirer.prompt({
                 name: "yesno",
                 type: "list",
@@ -247,6 +278,7 @@ async function banksystem() {
         }
     }
     else {
-        console.log(chalk.blueBright(`\n\n\t\tTHANKS FOR USING MY FIRST ATM`));
+        console.log(chalk.blueBright(`\n\n\t\tTHANKS FOR USING SSR-ATM`));
+        console.log(chalk.blueBright(`\t\t*************************`));
     }
 }

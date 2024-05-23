@@ -6,7 +6,8 @@ import chalk from "chalk";
 
 
 
-console.log(chalk.blueBright.bold(`\n\t\tWELCOME TO MY FIRST ATM \n\n`));
+console.log(chalk.blueBright.bold(`\n\t\tWELCOME TO SSR-ATM `));
+console.log(chalk.blueBright.bold(`\t\t******************* \n\n`));
 
 let myBalance = 500000; //Dollars
 
@@ -53,10 +54,17 @@ let myBalance = 500000; //Dollars
           choices: ["Yes", "No"],
         },
       ]);
-      if (continue_or_not.continueoption === "Yes") {//if yes than it will go to bank system again
-        banksystem();
-      } else {//if no than program will end 
-        console.log(chalk.blueBright(`\n\n\t\tTHANKS FOR USING MY FIRST ATM`));
+
+      if (continue_or_not.continueoption === "Yes")
+        {
+                banksystem();
+        }
+
+       else 
+       
+       {//if no than program will end 
+        console.log(chalk.blueBright(`\n\n\t\tTHANKS FOR USING SSR-ATM`));
+        console.log(chalk.blueBright(`\t\t*************************`));
       }
     }
 
@@ -224,8 +232,21 @@ let myBalance = 500000; //Dollars
 
                       { name: "kenum",
                         type: "number",
-                        message: "Enter 8-digits account number:"
-                }
+                        message: "Enter 4-digits K-Electric account number:",
+                        validate: function(input)
+                  {
+                    if( /^\d{4}$/.test(input)) 
+                      {
+                        
+                        return true;
+                      }
+                      else
+                      {
+                        return "Enter only 4-digits K-Electric account number"                                 
+                      }
+                  }}
+                    
+                
                     ]);
 
                 console.log(chalk.blueBright(`\n\n\t\tK-Electric \n\n\t\t Account #: ${kelec.kenum} \n\n\t\t Due Amount: $200`))
@@ -261,13 +282,25 @@ let myBalance = 500000; //Dollars
                     const sui = await inquirer.prompt
                     ([
     
-                        { 
-                          name: "sgas",
-                          types: "number",
-                          message: "Enter 8-digits account number:"
-                        }
-                      ]);
-    
+                    { 
+                      name: "sgas",
+                      types: "number",
+                      message: "Enter 4-digits SUI-Gas account number:",
+                      validate: function(input)
+                  {
+                    if( /^\d{4}$/.test(input)) 
+                      {
+                        
+                        return true;
+                      }
+                      else
+                      {
+                        return "Enter only 4-digits SUI-Gas account number"                                 
+                      }
+                  }}
+                    
+                  ]);
+
               console.log( chalk.blueBright(`\n\n\t\tSUI SOTHERN GAS COMPANY \n\n\t\t Account #: ${sui.sgas} \n\n\t\t Due Amount: $100` ))
               console.log(`\n`)
                           
@@ -307,8 +340,21 @@ let myBalance = 500000; //Dollars
               { 
                       name: "kwsbill",
                       type: "number",
-                      message: "Enter 8-digits account number:",
-              },
+                      message: "Enter 4-digits KWSB account number:",
+                      validate: function(input)
+                      {
+                        if( /^\d{4}$/.test(input)) 
+                          {
+                            
+                            return true;
+                          }
+                          else
+                          {
+                            return "Enter only 4-digits KWSB account number"                                 
+                          }
+                      }}
+                      
+              
               );
           
       console.log(chalk.blueBright(`\n\n\t\tKarachi Water Board \n\n\t\t Account #: ${water.kwsbill}\n\n\t\t Due Amount: $75`) )
@@ -339,15 +385,29 @@ let myBalance = 500000; //Dollars
 
         {
         
-                  const phone = await inquirer.prompt([
-                
-                    { name: "phonebill",
-                      type: "number",
-                      message: "Enter phone# with area code:"
-                    }]);
-                
-                  console.log(chalk.blueBright(`\n\n\t\tPakistan Telecommunication Limited \n\n\t\tAccount #: ${phone.phonebill} \n\t\t Due Amount: $250`) )
-                  console.log(`\n`)
+            const phone = await inquirer.prompt([
+          
+              { name: "phonebill",
+                type: "number",
+                message: "Enter 4-digits Phone# :",
+                validate: function(input)
+            {
+              if( /^\d{4}$/.test(input)) 
+                {
+                  
+                  return true;
+                }
+                else
+                {
+                  return "Enter only 4-digits SUI-Gas account number"                                 
+                }
+            }}
+              
+              ]);
+          
+            console.log(chalk.blueBright(`\n\n\t\tPakistan Telecommunication Limited \n\n\t\tAccount #: ${phone.phonebill} \n\t\t Due Amount: $250\n`) )
+            
+
           const yn = await inquirer.prompt( 
             
             { 
@@ -379,7 +439,8 @@ let myBalance = 500000; //Dollars
     }
     else
     {
-      console.log(chalk.blueBright(`\n\n\t\tTHANKS FOR USING MY FIRST ATM`));
+      console.log(chalk.blueBright(`\n\n\t\tTHANKS FOR USING SSR-ATM`));
+      console.log(chalk.blueBright(`\t\t*************************`));
   
     }
 }
