@@ -4,8 +4,8 @@ import inquirer from "inquirer";
 import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
 
-console.log(chalk.greenBright( `\n\t\tNumber Guessing Game`))
-console.log(chalk.greenBright( `\t\t--------------------`))
+console.log(chalk.greenBright( `\n\t\tWelcome to SSR Number Guessing Game`))
+console.log(chalk.greenBright( `\t\t------------------------------------`))
 
 let condition = true;
 
@@ -50,7 +50,7 @@ console.log( `\n\nComputer Random Number is ${randomNum}\n\n`);
 
     }
 
-    let rainbowtitle = chalkAnimation.rainbow(`\n\tTHANKS FOR PLAYING NUMBER GUESSING GAME `);
+    let rainbowtitle = chalkAnimation.rainbow(`\n\tTHANKS FOR PLAYING SSR NUMBER GUESSING GAME `);
 
 rainbowtitle.start();
 

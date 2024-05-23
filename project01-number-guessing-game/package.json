@@ -1,6 +1,6 @@
 {
-  "name": "ssr-cli-number-game",
-  "version": "2.0.1",
+  "name": "ssr-number-guessing-game01",
+  "version": "1.0.1",
   "description": "its a simple number game",
   "main": "index.js",
   "type": "module",

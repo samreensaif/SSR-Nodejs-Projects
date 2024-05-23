@@ -15,16 +15,25 @@ const userName = await inquirer.prompt([
         type: "password",
         message: `
           Enter your 4-digit pin number(digits only):`,
-        mask: "*"
+        mask: "*",
+        validate: function (input) {
+            if (/^\d{4}$/.test(input)) {
+                return true;
+            }
+            else {
+                return "Enter only 4-digits pin number";
+            }
+        }
     }
 ]);
+banksystem();
 async function continue_transaction() {
     //after first transaction of work than it will ask this
     let continue_or_not = await inquirer.prompt([
         {
             name: "continueoption",
             type: "list",
-            message: "\n\nDo You Want To Go To Main Menu?",
+            message: "Do You Want To Go To Main Menu?",
             choices: ["Yes", "No"],
         },
     ]);
@@ -32,19 +41,8 @@ async function continue_transaction() {
         banksystem();
     }
     else { //if no than program will end 
-        console.log(chalk.greenBright(`\n\n
-       THANKS FOR USING MY FIRST ATM
-        \n\n`));
+        console.log(chalk.blueBright(`\n\n\t\tTHANKS FOR USING MY FIRST ATM`));
     }
-}
-//this line checks if the pin number is 4 digits and digits only not letters
-//So, /^\d{4}$/ ensures that the input string consists of exactly four digits from start to finish.\d matches digit character 0-9, {4} shows it should be 4 digits. ^ sign is the start of input and $ is the end if input.further // slashes means its a beginning and end of expression. The test command test the userName.pinnumber should be 4 digits long.
-if (/^\d{4}$/.test(userName.pinNumber)) {
-    banksystem();
-}
-else {
-    console.log(`\n\n\t\tYou Have Entered Incorrect Pin Number`);
-    continue_transaction();
 }
 // make the function for the whole atm options
 async function banksystem() {
@@ -60,7 +58,8 @@ async function banksystem() {
                 `Withdraw Cash`,
                 `Balance`,
                 `Transfer`,
-                `PayBills`
+                `PayBills`,
+                `Exit`
             ],
         },
     ]);
@@ -246,5 +245,8 @@ async function banksystem() {
                 return continue_transaction();
             }
         }
+    }
+    else {
+        console.log(chalk.blueBright(`\n\n\t\tTHANKS FOR USING MY FIRST ATM`));
     }
 }

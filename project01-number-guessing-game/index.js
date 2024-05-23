@@ -2,8 +2,8 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 import chalkAnimation from "chalk-animation";
-console.log(chalk.greenBright(`\n\t\tNumber Guessing Game`));
-console.log(chalk.greenBright(`\t\t--------------------`));
+console.log(chalk.greenBright(`\n\t\tWelcome to SSR Number Guessing Game`));
+console.log(chalk.greenBright(`\t\t------------------------------------`));
 let condition = true;
 while (condition) {
     const answers = await inquirer.prompt([
@@ -32,6 +32,6 @@ while (condition) {
     });
     ask.continue == "yes" ? (condition = true) : (condition = false);
 }
-let rainbowtitle = chalkAnimation.rainbow(`\n\tTHANKS FOR PLAYING NUMBER GUESSING GAME `);
+let rainbowtitle = chalkAnimation.rainbow(`\n\tTHANKS FOR PLAYING SSR NUMBER GUESSING GAME `);
 rainbowtitle.start();
 rainbowtitle.stop();

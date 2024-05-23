@@ -2,8 +2,8 @@
 
 import inquirer from "inquirer";
 
-console.log("\n\t\t\tWELCOME TO SIMPLE CALCULATOR");
-console.log(`\t\t\t****************************\n`);
+console.log("\n\t\t\tWELCOME TO SSR-SIMPLE CALCULATOR");
+console.log(`\t\t\t********************************\n`);
 
 async function continueProcess()
 
@@ -28,8 +28,8 @@ async function continueProcess()
     else 
     
     { 
-        console.log(`\n\t\t\tThanks For Using SSR-MY-CALCULATOR`);
-        console.log(`\t\t\t**********************************\n`);
+        console.log(`\n\t\t\tThanks For Using SSR-SIMPLE-CALCULATOR`);
+        console.log(`\t\t\t**************************************\n`);
     
     }
 
