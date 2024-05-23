@@ -94,8 +94,6 @@ async function payFees(studentname) {
         let newstd_ID = uniqueID();
         const newStudent = new Student(studentname, newstd_ID, ask_new_course.newCourse, true);
         students.push(newStudent);
-        //console.log(students)
-        //let studentname1 = students.map(name => name.student)
         console.log(chalk.greenBright(`\n\n\tCONGRATULATIONS: YOU GET ENROLLED IN SSR-STUDENT-INFORMATION-SYSTEM `));
         await main();
     }
@@ -104,14 +102,14 @@ async function payFees(studentname) {
         let interested = await inquirer.prompt({
             name: "inter_yes",
             type: "confirm",
-            message: " Are you interested to pay the fees?",
+            message: chalk.redBright(`\nAre you interested to pay the fees?`)
         });
         if (interested.inter_yes) {
             await payFees(studentname);
         }
         else {
-            console.log(chalk.greenBright(`\n\t\tLog-In again after paying fees.
-                \n\tTHANKS FOR VISITING SSR-STUDENT-INFORMATION-SYSTEM`));
+            console.log(chalk.greenBright(`\n\n\t\tLog-In again after paying fees.
+                \n\n\tTHANKS FOR VISITING SSR-STUDENT-INFORMATION-SYSTEM`));
         }
     }
 }
