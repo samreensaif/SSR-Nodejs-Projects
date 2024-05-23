@@ -3,8 +3,8 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 
-console.log(chalk.greenBright( `\n\n\t\t\t^^^^^^^^^^^^^^^^^^^^^^`))
-console.log(chalk.greenBright( `\t\t\tSSR-CURRENCY-CONVERTER\n\t\t\t^^^^^^^^^^^^^^^^^^^^^^\n`))
+console.log(chalk.greenBright( `\n\n\t\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^`))
+console.log(chalk.greenBright( `\t\t\tWelcome To SSR-CURRENCY-CONVERTER\n\t\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n`))
 
 const currency : any = {
 
@@ -73,5 +73,5 @@ let want_continue = await inquirer.prompt([
 
 
 console.log(chalk.greenBright(`\n\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^`))
-console.log(chalk.greenBright(`\n\t\tTHANKS FOR USING SSR-CURRENCY-CONVERTER`))
-console.log(chalk.greenBright(`\n\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^`))
+console.log(chalk.greenBright(`\t\tTHANKS FOR USING SSR-CURRENCY-CONVERTER`))
+console.log(chalk.greenBright(`\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^`))

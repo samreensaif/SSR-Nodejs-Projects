@@ -1,8 +1,8 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
-console.log(chalk.greenBright(`\n\n\t\t\t^^^^^^^^^^^^^^^^^^^^^^`));
-console.log(chalk.greenBright(`\t\t\tSSR-CURRENCY-CONVERTER\n\t\t\t^^^^^^^^^^^^^^^^^^^^^^\n`));
+console.log(chalk.greenBright(`\n\n\t\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^`));
+console.log(chalk.greenBright(`\t\t\tWelcome To SSR-CURRENCY-CONVERTER\n\t\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n`));
 const currency = {
     USD: 1, // Base Currency
     EUR: 0.91,
@@ -51,5 +51,5 @@ while (condition) {
     want_continue.continue == 'Yes' ? (condition = true) : (condition = false);
 }
 console.log(chalk.greenBright(`\n\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^`));
-console.log(chalk.greenBright(`\n\t\tTHANKS FOR USING SSR-CURRENCY-CONVERTER`));
-console.log(chalk.greenBright(`\n\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^`));
+console.log(chalk.greenBright(`\t\tTHANKS FOR USING SSR-CURRENCY-CONVERTER`));
+console.log(chalk.greenBright(`\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^`));
