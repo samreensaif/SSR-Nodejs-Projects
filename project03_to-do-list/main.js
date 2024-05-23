@@ -3,7 +3,7 @@ import inquirer from "inquirer";
 import chalk from "chalk";
 //import { todo } from "node:test"
 let condition = true;
-console.log(chalk.greenBright(`\n\t\t=====SSR's DAILY TO-DO LIST=====\n\n`));
+console.log(chalk.greenBright(`\n\t\t=====SSR-TO-DO LIST=====\n\n`));
 let todo_List = ["Solve 100-Days-Coding-Challenge",
     "Watch Ramadan-Coding-Nights",
     "Learn Typescript From Videos ",
@@ -45,7 +45,7 @@ if (task.todoList == "yes") {
     }
 }
 else {
-    console.log(chalk.greenBright(`\n\t\t====THANKS FOR USING TO-DO's APP====`));
+    console.log(chalk.greenBright(`\n\t\t=====Thanks for Using SSR-TO-DO LIST=====\n\n`));
 }
 //function to ask whether want to add or delete any task 
 async function asktask() {
@@ -69,7 +69,7 @@ async function asktask() {
         await continue_task();
     }
     else {
-        console.log(chalk.greenBright("\n\n\t\t====THANKS FOR USING THE APP===="));
+        console.log(chalk.greenBright(`\n\t\t=====Thanks for Using SSR-TO-DO LIST=====\n\n`));
     }
 }
 //function for adding the task
@@ -142,6 +142,6 @@ async function continue_task() {
         asktask();
     }
     else { //if no than program will end 
-        console.log(chalk.greenBright(`\n\t\t====THANKS FOR USING TO-DO's APP====`));
+        console.log(chalk.greenBright(`\n\t\t=====Thanks for Using SSR-TO-DO LIST=====\n\n`));
     }
 }
