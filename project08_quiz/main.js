@@ -2,9 +2,9 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 //-----------------------------------------Rules starts here--------------------------------------------------
-console.log(chalk.magentaBright.bold.italic(`\n\t\t\t*********************************`));
-console.log(chalk.magentaBright.bold.italic(`\t\t\tWELCOME TO SSR-CLI-QUIZ APP`));
-console.log(chalk.magentaBright.italic(`\t\t\t*********************************`));
+console.log(chalk.magentaBright.bold.italic(`\n\t\t\t***********************`));
+console.log(chalk.magentaBright.bold.italic(`\t\t\tWELCOME TO SSR-QUIZ APP`));
+console.log(chalk.magentaBright.italic(`\t\t\t***********************`));
 console.log(chalk.yellowBright(`\n\n
 ${chalk.magenta.bold.italic.underline("GAMEPLAY:")}
 
@@ -236,6 +236,6 @@ else {
 }
 console.log(chalk.magenta.bold.italic(`Total number of correct answers: ${chalk.magentaBright.underline(totalQuestions)}`));
 console.log(chalk.greenBright.bold.italic(`\nCongratulations!!!! ${pname},\n\nYou Won $${chalk.magentaBright.underline(score)}`));
-console.log(chalk.redBright.bold.italic(`\n\t\t\t***********************************`));
-console.log(chalk.redBright.bold.italic(`\t\t\tTHANKS FOR PLAYING SSR-CLI-QUIZ APP`));
-console.log(chalk.redBright.italic(`\t\t\t***********************************`));
+console.log(chalk.redBright.bold.italic(`\n\t\t\t*******************************`));
+console.log(chalk.redBright.bold.italic(`\t\t\tTHANKS FOR PLAYING SSR-QUIZ APP`));
+console.log(chalk.redBright.italic(`\t\t\t********************************`));
