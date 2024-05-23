@@ -3,8 +3,8 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 
-console.log(chalk.greenBright(`\n\t\t+++++++SSR-WORD-COUNTER+++++++`));
-console.log(chalk.greenBright(`\t\t------------------------------`));
+console.log(chalk.greenBright(`\n\t\tWelcome To SSR-WORD-COUNTER\n`));
+
 
 
 let condition = true;
@@ -17,7 +17,7 @@ const ask = await inquirer.prompt({
 
     name: "sentence",
     type: "input",
-    message: "\nEnter the sentence you want to count: "
+    message: "Enter the sentence you want to count: "
 })
 
 let wordCount = ask.sentence.trim().split(" ")  // trim cut the spaces and split 
@@ -34,7 +34,7 @@ let cont = await inquirer.prompt({
 
     name : "continue",
     type : "list",
-    message : "\nDo You Want To Continue?\n",
+    message : "Do You Want To Continue?",
     choices : ["yes","no"]
 
 })
@@ -43,6 +43,4 @@ cont.continue ==  "yes" ? (condition = true) : (condition = false);
 
 
 }
-console.log(chalk.greenBright(`\n\t+++++++Thanks For Using SSR-Word Counter+++++++`));
-console.log(chalk.greenBright(`\t------------------------------------------------`)); 
-        
+console.log(chalk.greenBright(`\n\t\tThanks For Using SSR-WORD-COUNTER`));
