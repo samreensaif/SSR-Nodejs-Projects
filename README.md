@@ -13,5 +13,5 @@ Here are the details of my projects with their GitHub URLs and NPX commands:
 9. **𝐐𝐮𝐢𝐳 𝐆𝐚𝐦𝐞:** `npx ssr-quiz-08`
 10. **𝐂𝐨𝐮𝐧𝐭𝐝𝐨𝐰𝐧 𝐓𝐢𝐦𝐞𝐫:**  `npx ssr-countdown-timer09`
 11. **𝐎𝐎𝐏 𝐇𝐞𝐚𝐥𝐭𝐡𝐂𝐚𝐫𝐞 𝐈𝐧𝐟𝐨𝐒𝐲𝐬𝐭𝐞𝐦:** `npx ssr-oop-healthcare-infosystem10`
-12. **𝐎𝐎𝐏 𝐌𝐲𝐁𝐚𝐧𝐤:** ssr-oop-mybank11`
+12. **𝐎𝐎𝐏 𝐌𝐲𝐁𝐚𝐧𝐤:** `npx ssr-oop-mybank11`
 
