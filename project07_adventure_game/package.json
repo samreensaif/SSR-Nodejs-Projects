@@ -1,6 +1,6 @@
 {
-  "name": "ssr-cli-adventure-game",
-  "version": "2.0.0",
+  "name": "ssr-adventure-game07",
+  "version": "1.0.1",
   "description": "its a simple console based adventure game",
   "main": "main.js",
   "type": "module",
