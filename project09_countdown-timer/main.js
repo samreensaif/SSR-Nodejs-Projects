@@ -3,8 +3,8 @@ import inquirer from "inquirer";
 import chalk from "chalk";
 import clear from "clear";
 clear();
-console.log(chalk.redBright(`\n\n\t\t\t^^^^^^^^^^^^^^^^^^^^^^^`));
-console.log(chalk.redBright(`\t\t\tSSR-CLI-COUNTDOWN-TIMER\n\t\t\t^^^^^^^^^^^^^^^^^^^^^^^\n`));
+console.log(chalk.redBright(`\n\n\t\t\t^^^^^^^^^^^^^^^^^^^^`));
+console.log(chalk.redBright(`\t\t\tSSR-COUNTDOWN-TIMER\n\t\t\t^^^^^^^^^^^^^^^^^^^^^\n`));
 //-------------------------------- Object containing event dates---------------------------------------------
 const date = {
     Independence_Day: "2024-7-14",
@@ -49,8 +49,8 @@ async function run() {
     while (continueLoop) {
         continueLoop = await calculateTimeRemaining();
     }
-    console.log(chalk.redBright(`\n\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^`));
-    console.log(chalk.redBright(`\t\tTHANKS FOR USING SSR-CLI-COUNTDOWN-TIMER`));
-    console.log(chalk.redBright(`\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^`));
+    console.log(chalk.redBright(`\n\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^`));
+    console.log(chalk.redBright(`\t\tTHANKS FOR USING SSR-COUNTDOWN-TIMER`));
+    console.log(chalk.redBright(`\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^`));
 }
 run();
